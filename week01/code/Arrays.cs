@@ -11,8 +11,8 @@ public static class Arrays
         // initialize the array of size length to store the results
         double[] result = new double[length];
 
-        // loop through the array and calculate the multiples of the number
-        // starting from index 0 = number * 1, index 1 = number * 2, index 2 = number * 3, etc.
+        // loop through the array and fill the values with the multiples of the number
+        // We multiply it first by 1, then we increment it unfil the array is filled
         for (int i = 0, start = 1; i < length; i++)
         {
             result[i] = number * start;
@@ -39,9 +39,11 @@ public static class Arrays
             temp[i] = data[i];
         }
 
-        // Rearrange data list from our copy
+        // Rearrange data list based on our copy and on our rotation amount
         // The first index will be the new one based on the rotation
         // Then iterate in a way that within the length but cyclic using modulo
+        // meaning data[0] will be temp[8] if we rotate by 1 in a list of 9 elements
+        // data[1] will be temp[0] and so on
         for (int i = 0; i < length; i++)
         {
             data[i] = temp[(length + i - amount) % length];
