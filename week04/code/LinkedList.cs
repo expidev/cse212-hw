@@ -32,7 +32,11 @@ public class LinkedList : IEnumerable<int>
     /// </summary>
     public void InsertTail(int value)
     {
-        // TODO Problem 1
+        // case tail is null
+        // the new created node will be the new tail
+        // case there is a tail
+        // then the tail->next is the new inserted tail
+        // new_tail->prev is equal to the last tail
     }
 
 
@@ -64,7 +68,10 @@ public class LinkedList : IEnumerable<int>
     /// </summary>
     public void RemoveTail()
     {
-        // TODO Problem 2
+        // access the last tail if exists
+        // remove that last tail
+        // access the last tail prev temporary
+        // that will be the new tail
     }
 
     /// <summary>
